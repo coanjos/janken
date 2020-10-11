@@ -1,3 +1,25 @@
+//                  DESAFIO FATAL
+
+
+// criar elemento img com src vazio drento da jankenwinner
+
+// criar uma função para mudar imagens com o nome que quiser
+    // a função recebe um argumento won para saber quem ganhou
+    // fazer ifs para condição que cpu, player e draw na won
+    // dependendo do resultado, mudar imagens
+
+// chamar a função criada dentro do janken
+
+// usar a função gameOverColors de exemplo
+
+// apagar comentários
+
+// criar branch
+
+// criar PR
+
+// mudar o board pra done só depois que a pull request estiver ok
+
 const jankenOptions = ['ROCK', 'PAPER', 'SCISSORS']
 
 const buttons = document.querySelectorAll('.box-janken-player button')
