@@ -27,8 +27,9 @@ const janken = (playerChoice, computerChoice) => {
     if(playerChoice === 'ROCK' && computerChoice === 'SCISSORS') {
         boxJankenWinner.textContent = 'YOU WON!'
     }
-    // else ifs
-    //
+    else if(playerChoice === 'SCISSORS' && computerChoice === 'ROCK') {
+        boxJankenWinner.textContent = 'YOU LOST'
+    }
     else {
         boxJankenWinner.textContent = 'DRAW!'
     }
