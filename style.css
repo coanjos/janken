@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: pink;
+  }
+  
+  h1 {
+    color: teal;
+  }
+  
+  .box-janken-computer {
+    border: 2px solid red;
+  }
+  
+  .box-janken-player {
+    border: 2px solid blue;
+    margin: 2rem;
+  }
+  
+  .box-rock, .box-paper, .box-scissors {
+    border: 2px solid teal;
+    display: inline;
+    margin: 2rem;
+    padding: 1rem;
+  }
+  
