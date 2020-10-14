@@ -9,18 +9,34 @@ body {
   }
   
   .box-janken-computer {
-    border: 2px solid red;
+    
   }
   
   .box-janken-player {
-    border: 2px solid blue;
     margin: 2rem;
   }
   
-  .box-rock, .box-paper, .box-scissors {
-    border: 2px solid teal;
+  .button-rock, .button-paper, .button-scissors {
+    border: 4px solid #22b6a2;
+    border-top: none;
+    border-bottom: 8px solid #22b6a2;
+    border-radius: 6px;
+    background: #27d3bc;
+    color: #fff;
+    font-weight: 700;
     display: inline;
     margin: 2rem;
     padding: 1rem;
   }
   
+  .button-rock:hover,
+  .button-paper:hover,
+  .button-scissors:hover,
+  .button-rock:active,
+  .button-paper:active,
+  .button-scissors:active {
+    background: #5de1cf;
+    border-bottom: 2px solid #22b6a2;
+    transform: translateY(6px);
+    transition: all ease-in 0.2s;
+  }
