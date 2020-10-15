@@ -40,6 +40,18 @@ const playerChoice = (choice) => {
     return jankenOptions.find((item) => item === choice)
 }
 
+const changeImage = (won) => {
+    if (won.toUpperCase() === 'PLAYER') {
+        const jankenChangeImg = document.querySelector('.box-janken-winner img').src = 'jankenFotos/win.jpg'
+        
+    } else if (won.toUpperCase() === 'CPU') {
+        const jankenChangeImg = document.querySelector('.box-janken-winner img').src = 'jankenFotos/loss.jpg'
+
+    } else {
+        const jankenChangeImg = document.querySelector('.box-janken-winner img').src = 'jankenFotos/draw.png'
+    }
+}
+
 const gameOverColors = (won) => {
     if (won.toUpperCase() === 'PLAYER') {
         const boxJankenComputer = document.querySelector('.box-janken-computer h2')
@@ -67,30 +79,37 @@ const janken = (playerChoice, computerChoice) => {
 
     if(playerChoice === 'ROCK' && computerChoice === 'SCISSORS') {
         boxJankenWinner.textContent = 'YOU WON!'
-        gameOverColors('PLAYER')        
+        gameOverColors('PLAYER')
+        changeImage('PLAYER')        
     }
     else if(playerChoice === 'SCISSORS' && computerChoice === 'ROCK') {
         boxJankenWinner.textContent = 'YOU LOST'
         gameOverColors('CPU')
+        changeImage('CPU')
     }
     else if(playerChoice === 'SCISSORS' && computerChoice === 'PAPER'){
         boxJankenWinner.textContent = 'YOU WON'
         gameOverColors('PLAYER')
+        changeImage('PLAYER')
     }
     else if(playerChoice === 'PAPER' && computerChoice === 'SCISSORS'){
         boxJankenWinner.textContent = 'YOU LOST'
         gameOverColors('CPU')
+        changeImage('CPU')
     }
     else if(playerChoice === 'PAPER' && computerChoice === 'ROCK'){
         boxJankenWinner.textContent = 'YOU WON'
         gameOverColors('PLAYER')
+        changeImage('PLAYER') 
     }
     else if(playerChoice === 'ROCK' && computerChoice === 'PAPER'){
         boxJankenWinner.textContent = 'YOU LOST'
         gameOverColors('CPU')
+        changeImage('CPU')
     }
     else {
         boxJankenWinner.textContent = 'DRAW!'
         gameOverColors('DRAW')
+        changeImage('DRAW')
     }
 }
